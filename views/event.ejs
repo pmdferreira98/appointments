@@ -1,0 +1,12 @@
+<h1>Consulta: <%= appo.description %></h1>
+<hr>
+<h4>Paciente: <%= appo.name %></h4>
+<h4>Email: <%= appo.email %></h4>
+<h4>Nº. Utente: <%= appo.nutente %></h4>
+<hr>
+<% if(appo.finished == false){ %>
+    <form action="/finish" method="post">
+        <input type="hidden" name="id" value="<%= appo._id %>">
+        <button>Finalizar consulta</button>
+    </form>
+<% } %>
